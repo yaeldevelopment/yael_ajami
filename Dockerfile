@@ -23,7 +23,7 @@ RUN ng build --configuration production
 FROM nginx:alpine
 
 # Copy the Angular build output to Nginx's html folder
-COPY --from=build /app/dist/location/browser /usr/share/nginx/html
+COPY --from=build /app/dist/robot/browser /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80

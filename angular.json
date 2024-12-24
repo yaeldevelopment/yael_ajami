@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/location",
+            "outputPath": "dist/robot",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Location:build:production"
+              "buildTarget": "robot:build:production"
             },
             "development": {
-              "buildTarget": "Location:build:development"
+              "buildTarget": "robot:build:development"
             }
           },
           "defaultConfiguration": "development"
