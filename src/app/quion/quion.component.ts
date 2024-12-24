@@ -42,7 +42,7 @@ startThinking() {
   this.isThinking = true;
   let step = 0;
   this.subscription?.unsubscribe();
-  this.subscription = interval(500).subscribe(() => {
+  this.subscription = interval(1000).subscribe(() => {
     step = (step + 1) % 4;
     this.dots = [step > 0, step > 1, step > 2];
     if (step === 0) {
