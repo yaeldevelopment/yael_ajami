@@ -1,0 +1,26 @@
+
+    <div class="row">
+        <div class="robot col-md-auto">
+         
+          <!-- תמונה של רובוט או אייקון שיכול להוות את הרובוט -->
+          <img src="assets/robot.jpg" alt="Robot" class="robot-icon">
+        </div>
+        @if (isThinking) {
+             <div class="thinking-dots">
+            @for (item of dots; track $index) {
+          <div  [ngClass]="{'thinking': item}" class="dot"></div>
+        }
+         
+        </div>
+        }
+       
+        @else if (!isThinking) {
+        <div  class="question col-md-8">
+          {{ quion }}
+        </div>
+          @if(answers && id){
+                <app-answer [answers]="answers" [id]="id"></app-answer>
+          }
+   
+    }
+      </div>

@@ -1,0 +1,43 @@
+.robot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .robot {
+    margin-bottom: 20px;
+  }
+  
+  .robot-icon {
+    border-radius: 48px;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .thinking-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.thinking {
+    background-color: #888; /* האפור החזק כשהרובוט "חושב" */
+  }
+  
+  .question {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

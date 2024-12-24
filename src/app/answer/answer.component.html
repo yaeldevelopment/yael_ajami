@@ -1,0 +1,18 @@
+@if(answers){
+<div class="answers">
+
+@for (item of answers; track $index) {
+    <label class="custom-checkbox">
+        <input type="radio" 
+        [name]="'options_' + id"
+        [value]="item" 
+        [(ngModel)]="selectedOptions"
+      />
+      
+        {{ item.answer }}
+      </label>
+
+}
+
+      <img src="assets/send.png" alt="Send" (click)="send_answar($event)" class="send-icon">
+</div>}

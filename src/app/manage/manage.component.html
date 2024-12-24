@@ -1,0 +1,9 @@
+<h1 class="title_reserved">צאט זה נבנה על ידי יעל עג'מי</h1>
+@if(currentValue)
+{
+    @for (item of currentValue; track $index) {
+    <app-quion  [id]="item.id?item.id:null"  [quion]="item.question" [answers]="item.answers?item.answers:null"></app-quion>
+}
+
+}
+    

@@ -1,0 +1,35 @@
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .custom-checkbox {
+  padding: 8px;
+        border: 1px solid #000;
+        border-radius: 12px ;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        font-size: 16px;
+    
+    [type="radio"]{
+        display: none;
+    }
+  
+     &:has(input:checked) {
+        border: 2px solid #000;
+    }
+  }
+  .answers{
+    display: flex;
+        gap: 20px;
+  }
+  .send-icon{
+    width: 50px;
+    height: 40px;
+    transform: scaleX(-1);
+    cursor: pointer;
+  }
+  
