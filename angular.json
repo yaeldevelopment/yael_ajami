@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "robot": {
+    "Location": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/robot",
+            "outputPath": "dist/location",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,35 +32,34 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",  "node_modules/@angular/material/prebuilt-themes/indigo-pink.css" 
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
+              
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1mb",
+    "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "8kb",
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true
+       
             }
           },
           "defaultConfiguration": "production"
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "robot:build:production"
+              "buildTarget": "Location:build:production"
             },
             "development": {
-              "buildTarget": "robot:build:development"
+              "buildTarget": "Location:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -96,8 +95,13 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",  "node_modules/@angular/material/prebuilt-themes/indigo-pink.css" 
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules"
+              ]
+            },
             "scripts": []
           }
         }
@@ -105,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "f024292e-30ac-4263-993d-665bc4a319a0"
+    "analytics": "e8d070c7-5c09-40dd-8c5b-53dc13316ea1"
   }
 }
