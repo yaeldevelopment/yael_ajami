@@ -2,3 +2,20 @@
     text-align: center;
     color: cornflowerblue;
 }
+.thinking-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.thinking {
+    background-color: #888; /* האפור החזק כשהרובוט "חושב" */
+  }

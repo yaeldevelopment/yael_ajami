@@ -6,5 +6,16 @@
     <app-quion  [id]="item.id?item.id:null"  [quion]="item.question" [answers]="item.answers?item.answers:null"></app-quion>
 }
 
+
+}
+ @if(!isThinking){
+   
+        <div class="thinking-dots">
+       @for (item of dots; track $index) {
+     <div  [ngClass]="{'thinking': item}" class="dot"></div>
+   }
+    
+   </div>
+   
 }
     

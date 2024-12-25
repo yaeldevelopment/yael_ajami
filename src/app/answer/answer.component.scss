@@ -32,4 +32,9 @@
     transform: scaleX(-1);
     cursor: pointer;
   }
-  
+  .error{
+    &[class*='hide']{
+      display: none;
+    }
+    color: red;
+  }

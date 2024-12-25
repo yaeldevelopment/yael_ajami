@@ -37,7 +37,13 @@ export class AnswerComponent implements OnInit  {
     this.serv.updateValue(newValue);
   }
  
-  send_answar(event: MouseEvent){   
+  send_answar(event: MouseEvent){  
+
+    if(!this.selectedOptions){
+      
+     
+      return;
+    }
      const sendIcons = document.getElementsByClassName("send-icon"); 
         if (sendIcons) {
       Array.from(sendIcons)[0].remove();
