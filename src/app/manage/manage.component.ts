@@ -20,9 +20,12 @@ export class ManageComponent {
 constructor(private serv:QuionService){
   
  this.serv.currentValue$.subscribe((value) => {
-  this.isThinking=true;
- this.stopThinking();
-      this.currentValue = value;
+  if(value.length>0){
+    this.isThinking=true; 
+    this.stopThinking();
+    this.currentValue = value;
+  }
+      
 
     });
 
