@@ -46,7 +46,6 @@ export class AnswerComponent implements OnInit  {
       return;
     }
 
-    console.log(    document.getElementsByClassName("error_"+this.id))
      const sendIcons = document.getElementsByClassName("send-icon"); 
         if (sendIcons) {
       Array.from(sendIcons)[0].remove();
