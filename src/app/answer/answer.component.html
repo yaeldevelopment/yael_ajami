@@ -7,6 +7,7 @@
         [name]="'options_' + id"
         [value]="item" 
         [(ngModel)]="selectedOptions"
+        (change)="select_answer()"
       />
       
         {{ item.answer }}
@@ -14,6 +15,7 @@
  
 
 }
-     <label class=" error  hide  id"> יש לבחור אופציה אחת מהרשימה</label>
-      <img src="assets/send.png" alt="Send" (click)="send_answar($event)" class="send-icon">
+
+      <img src="assets/send.png" alt="Send" (click)="send_answar($event)" class="send-icon">    
+       <label   [class]="'error row hide error_' + id"> יש לבחור אופציה אחת מהרשימה</label>
 </div>}

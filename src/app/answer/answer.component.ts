@@ -36,14 +36,17 @@ export class AnswerComponent implements OnInit  {
     // עדכון הערך המשותף דרך השירות
     this.serv.updateValue(newValue);
   }
- 
+  select_answer(){
+    document.getElementsByClassName("error_"+this.id)[0].classList.add("hide");  
+  }
   send_answar(event: MouseEvent){  
 
     if(!this.selectedOptions){
-      
-     
+      document.getElementsByClassName("error_"+this.id)[0].classList.remove("hide");
       return;
     }
+
+    console.log(    document.getElementsByClassName("error_"+this.id))
      const sendIcons = document.getElementsByClassName("send-icon"); 
         if (sendIcons) {
       Array.from(sendIcons)[0].remove();
