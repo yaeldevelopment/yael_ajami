@@ -19,3 +19,8 @@
   .dot.thinking {
     background-color: #888; /* האפור החזק כשהרובוט "חושב" */
   }
+  @media (max-width:767px) {
+      app-quion{
+    position: relative;
+  }
+  }
