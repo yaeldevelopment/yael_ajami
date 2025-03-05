@@ -8,7 +8,10 @@
   }
   
   .robot {
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
+    display: flex;
+
+        align-items: center;
   }
   
   .robot-icon {

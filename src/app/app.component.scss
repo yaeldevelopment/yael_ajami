@@ -1,3 +1,7 @@
 app-manage{
     margin-top: 5% !important;
+    @media (max-width:767px) {
+         padding: 0 5% !important;
+    }
+   
 }
